@@ -1,0 +1,11 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model AlloyAdvanced.Models.Blocks.EventBlock
+
+<div>
+    @Html.PropertyFor(m => m.Title)
+    @Html.PropertyFor(m => m.When)
+    @Html.PropertyFor(m => m.Where)
+    @Html.PropertyFor(m => m.Description)
+</div>

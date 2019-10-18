@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <language name="Svenska" id="sv">
+    <contenttypes>
+      <startpage>
+        <name>Start</name>
+        <description>Det här är startsidan</description>
+        <properties>
+          <logo>
+            <caption>Logotypen för hemsidan</caption>
+            <help>visas på alla sidor.</help>
+          </logo>
+          <contactemail>
+            <caption>Contact e-mail</caption>
+            <help>The e-mail address shown in the footer for a web site visitor to contact.</help>
+          </contactemail>
+        </properties>
+      </startpage>
+      <standardpage>
+        <name>Standard</name>
+        <description>The standard page has an introductory paragraph of text and a main body.</description>
+        <properties>
+          <mainintro>
+            <caption>Main introduction</caption>
+            <help>A paragraph introducing the content of the page.</help>
+          </mainintro>
+          <mainbody>
+            <caption>Main body</caption>
+            <help>The main body of the page containing rich text formatted content.</help>
+          </mainbody>
+        </properties>
+      </standardpage>
+      <eventblock>
+        <name>Event</name>
+        <description>Events have a title and description, and where and when they take place.</description>
+      </eventblock>
+    </contenttypes>
+  </language>
+</languages>

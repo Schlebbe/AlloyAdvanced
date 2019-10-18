@@ -1,0 +1,59 @@
+﻿@using PracticeSite.Models.Blocks
+@using PracticeSite.Models.ViewModels;
+@using EPiServer;
+@using EPiServer.Core;
+@using EPiServer.ServiceLocation;
+@using PracticeSite.Business.UI;
+@model ISitePageViewModel<PracticeSite.Models.Pages.StartPage>
+@Html.Partial("_MainIntroAndBody", Model)
+@if (Model.CurrentPage.EventListOption == EventListOption.ContentArea)
+{
+    if (Model.CurrentPage.EventListContentArea != null)
+    {
+        if (Model.CurrentPage.EventListContentArea.Count > 0)
+        {
+            // this code should really be in controller NOT view!
+            IContentLoader loader = ServiceLocator.Current.GetInstance<IContentLoader>();
+            IEnumerable<ContentAreaItem> items = Model.CurrentPage.EventListContentArea.FilteredItems;
+            IEnumerable<ContentReference> blockRefs = items.Select(x => x.ContentLink);
+            IEnumerable<EventBlock> blocks = loader.GetItems(blockRefs, new LoaderOptions()).OfType<EventBlock>();
+            <div class="row">
+                <hr />
+                <h4>Event List (using a content area)</h4>
+                <hr />
+                <div>
+                    @foreach (EventBlock item in blocks.OrderBy(b => b.When))
+                    {
+                        Html.RenderContentData(item, true);
+                    }
+                </div>
+            </div>
+        }
+    }
+}
+@if (Model.CurrentPage.EventListOption == EventListOption.ListOfContentReferences)
+{
+    if (Model.CurrentPage.EventListReferences != null)
+    {
+        if (Model.CurrentPage.EventListReferences.Count > 0)
+        {
+            <div class="row">
+                <hr />
+                <h4>Event List (as list of content references)</h4>
+                <hr />
+                <div>
+                    @{
+                        var loader = ServiceLocator.Current.GetInstance<IContentLoader>();
+                        IEnumerable<EventBlock> blocks = loader.GetItems(Model.CurrentPage.EventListReferences, new LoaderOptions()).OfType<EventBlock>();
+                        blocks = blocks.OrderBy(b => b.When);
+                    }
+                    @foreach (EventBlock block in blocks)
+                    {
+                        Html.RenderContentData(block, true);
+                    }
+                </div>
+            </div>
+                                }
+
+                            }
+                        }

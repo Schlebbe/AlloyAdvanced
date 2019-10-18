@@ -1,0 +1,9 @@
+﻿@using PracticeSite.Models.Pages
+@using PracticeSite.Models.ViewModels
+@model ISitePageViewModel<StandardPage>
+@Html.Partial("_MainIntroAndBody", Model)
+<div class="row">
+    <div>
+        @Html.PropertyFor(m => m.CurrentPage.BlocksAndPages)
+    </div>
+</div>

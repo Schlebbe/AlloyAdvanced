@@ -1,0 +1,11 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model AlloyAdvanced.Models.Blocks.PersonBlock
+
+<div>
+    @Html.PropertyFor(m => m.FirstName)
+    @Html.PropertyFor(m => m.LastName)
+    @Html.PropertyFor(m => m.Birthday)
+    @Html.PropertyFor(m => m.Summary)
+</div>

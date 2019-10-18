@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlloyAdvanced", "AlloyAdvanced\AlloyAdvanced.csproj", "{88582D64-915D-447E-86B2-95C55ACC41EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSite", "PracticeSite\PracticeSite.csproj", "{383263BE-3BF9-41C4-9A4A-B790BCD2138D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88582D64-915D-447E-86B2-95C55ACC41EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88582D64-915D-447E-86B2-95C55ACC41EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88582D64-915D-447E-86B2-95C55ACC41EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88582D64-915D-447E-86B2-95C55ACC41EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383263BE-3BF9-41C4-9A4A-B790BCD2138D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383263BE-3BF9-41C4-9A4A-B790BCD2138D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383263BE-3BF9-41C4-9A4A-B790BCD2138D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383263BE-3BF9-41C4-9A4A-B790BCD2138D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBE9428B-CA4E-409C-B231-849C8C292E47}
+	EndGlobalSection
+EndGlobal

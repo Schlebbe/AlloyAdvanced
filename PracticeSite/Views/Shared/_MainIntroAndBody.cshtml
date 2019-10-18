@@ -1,0 +1,22 @@
+﻿@using PracticeSite.Models.Pages
+@using PracticeSite.Models.ViewModels
+@model ISitePageViewModel<SitePageData>
+<div class="row">
+    <div class="alert alert-info">
+        <h4 @Html.EditAttributes(m => m.CurrentPage.MainIntro)>
+            @(Model.CurrentPage.MainIntro ?? Model.CurrentPage.MetaDescription)
+        </h4>
+        @if ((EPiServer.Editor.PageEditing.PageIsInEditMode) && (Model.CurrentPage.MainIntro == null))
+        {
+            <div class="alert alert-warning">
+                The MainIntro property is empty so the META description is being shown in the above section instead.
+            </div>
+        }
+    </div>
+</div>
+<div class="row">
+    <div>
+        @Html.PropertyFor(m => m.CurrentPage.MainBody)
+    </div>
+</div>
+
