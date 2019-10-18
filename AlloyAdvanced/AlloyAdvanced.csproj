@@ -341,6 +341,11 @@
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Helpers\CategorizableExtensions.cs" />
+    <Compile Include="Features\Favorites\Favorite.cs" />
+    <Compile Include="Features\Favorites\FavoriteRepository.cs" />
+    <Compile Include="Features\Favorites\FavoritesController.cs" />
+    <Compile Include="Features\Favorites\FavoritesInitializationModule.cs" />
+    <Compile Include="Features\Favorites\FavoriteViewModel.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\UrlHelpers.cs" />
     <Compile Include="Models\Blocks\ButtonBlock.cs" />
@@ -484,6 +489,7 @@
     <Content Include="Features\ContentApprovals\ContentApprovalsManager.cshtml" />
     <Content Include="Features\UserNotifications\NotificationsPage.cshtml" />
     <Content Include="Features\UserNotifications\SendNotificationPage.cshtml" />
+    <Content Include="Features\Favorites\FavoritesMenu.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\SearchPage\Index.cshtml" />
     <Content Include="Views\_viewstart.cshtml" />
