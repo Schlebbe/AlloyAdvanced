@@ -1,4 +1,0 @@
-public class StartPage : SitePageData
-{
-    [AllowedTypes(typeof(ShippersPage))]
-    public virtual ContentReference Shippers { get; set; }

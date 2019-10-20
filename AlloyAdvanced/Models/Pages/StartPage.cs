@@ -72,5 +72,12 @@ namespace AlloyAdvanced.Models.Pages
         [AllowedTypes(typeof(ShippersPage))]
         public virtual ContentReference Shippers { get; set; }
 
+        [UIHint(Global.SiteUIHints.Embiggen)]
+        [Display(Name = "Bigger text box")]
+        public virtual string BiggerTextBox { get; set; }
+
+        [Display(Name = "Normal text box")]
+        public virtual string NormalTextBox { get; set; }
+
     }
 }
