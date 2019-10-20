@@ -69,5 +69,8 @@ namespace AlloyAdvanced.Models.Pages
         [Display(GroupName = "Events")]
         public virtual ContentReference EventListAsReferenceToAssetsFolder { get; set; }
 
+        [AllowedTypes(typeof(ShippersPage))]
+        public virtual ContentReference Shippers { get; set; }
+
     }
 }
