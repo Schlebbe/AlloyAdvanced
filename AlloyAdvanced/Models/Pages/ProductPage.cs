@@ -34,5 +34,12 @@ namespace AlloyAdvanced.Models.Pages
         [AllowedTypes(new[] { typeof(IContentData) },new[] { typeof(JumbotronBlock) })]
         //[AllowedEditors(NotAllowedAction = NotAllowedAction.Readonly, Roles = new[] {"", ""})]
         public virtual ContentArea RelatedContentArea { get; set; }
+
+        [Display(
+Name = "Last updated",
+GroupName = SystemTabNames.Content,
+Order = 20)]
+        [UIHint(Global.SiteUIHints.DateOnly)]
+        public virtual System.DateTime? LastUpdated { get; set; }
     }
 }
