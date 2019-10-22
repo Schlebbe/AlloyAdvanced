@@ -315,6 +315,7 @@
     <Compile Include="Business\Channels\WebChannel.cs" />
     <Compile Include="Business\ContentExtensions.cs" />
     <Compile Include="Business\ContentLocator.cs" />
+    <Compile Include="Business\CustomFieldQuery.cs" />
     <Compile Include="Business\EditorDescriptors\CityEditorDescriptor.cs" />
     <Compile Include="Business\EditorDescriptors\ContactPageSelectionFactory.cs" />
     <Compile Include="Business\EditorDescriptors\ContactPageSelector.cs" />
@@ -337,6 +338,7 @@
     <Compile Include="Business\Initialization\FilterConfig.cs" />
     <Compile Include="Business\Initialization\IphoneInit.cs" />
     <Compile Include="Business\Initialization\RegisterPersonalizationEvaluatorsInitialization.cs" />
+    <Compile Include="Business\Initialization\SearchBlocksInitializationModule.cs" />
     <Compile Include="Business\PageContextActionFilter.cs" />
     <Compile Include="Business\PageTypeExtensions.cs" />
     <Compile Include="Business\PageViewContextFactory.cs" />
@@ -410,6 +412,7 @@
     <Compile Include="Features\Favorites\FavoritesController.cs" />
     <Compile Include="Features\Favorites\FavoritesInitializationModule.cs" />
     <Compile Include="Features\Favorites\FavoriteViewModel.cs" />
+    <Compile Include="Helpers\DocumentExtensions.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\UrlHelpers.cs" />
     <Compile Include="Models\Blocks\ButtonBlock.cs" />
