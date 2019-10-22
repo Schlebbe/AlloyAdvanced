@@ -53,6 +53,18 @@ namespace AlloyAdvanced.Controllers
                 model.Hits = hits;
                 model.NumberOfHits = hits.Count();
             }
+            // a hacky way to quickly set a temporary,
+            // in-browser-process cookie, by looking for a special
+            // search query like: epi=>red
+            if (!string.IsNullOrWhiteSpace(q) && q.Contains("=>"))
+            {
+                string[] parts = q.Split(new string[] { "=>" },
+                System.StringSplitOptions.RemoveEmptyEntries);
+                if (parts.Length == 2)
+                {
+                    Response.Cookies.Add(new HttpCookie(parts[0], parts[1]));
+                }
+            }
 
             return View(model);
         }
