@@ -23,19 +23,14 @@ namespace AlloyAdvanced.Models.Pages
         [Display(GroupName = Global.GroupNames.Contact)]
         public virtual string Phone { get; set; }
 
-        [Display(GroupName = Global.GroupNames.Contact)]
-        [EmailAddress]
-        public virtual string Email { get; set; }
+        
 
         [Display(Name = "Region", Order = 10,
 GroupName = Global.GroupNames.Contact)]
         [SelectOneEnum(typeof(Region))]
         public virtual Region Region { get; set; }
 
-        [Display(Name = "YouTube video", Order = 20,
-        GroupName = Global.GroupNames.Contact)]
-        [SelectOne(SelectionFactoryType = typeof(YouTubeSelectionFactory))]
-        public virtual string YouTubeVideo { get; set; }
+       
 
         [Display(Name = "Home city", Order = 30,
         GroupName = Global.GroupNames.Contact)]
@@ -43,9 +38,21 @@ GroupName = Global.GroupNames.Contact)]
         [UIHint(Global.SiteUIHints.City)]
         public virtual string HomeCity { get; set; }
 
+        [Display(GroupName = Global.GroupNames.Contact)]
+        [EmailAddress]
+        [UIHint(Global.SiteUIHints.Email)]
+        public virtual string Email { get; set; }
+
+        [Display(Name = "YouTube video", Order = 20,
+        GroupName = Global.GroupNames.Contact)]
+        [SelectOne(SelectionFactoryType = typeof(YouTubeSelectionFactory))]
+        [UIHint(Global.SiteUIHints.YouTube)]
+        public virtual string YouTubeVideo { get; set; }
+
         [Display(Name = "Other cities", Order = 40,
         GroupName = Global.GroupNames.Contact)]
-        [SelectOne(SelectionFactoryType = typeof(CitySelectionFactory))]
+        [SelectMany(SelectionFactoryType = typeof(CitySelectionFactory))]
+        [UIHint(Global.SiteUIHints.Cities)]
         public virtual string OtherCities { get; set; }
     }
 }
